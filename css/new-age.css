@@ -80,7 +80,7 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase; }
     #mainNav .navbar-nav > li > a.active {      
-      background-color: rgba(255, 153, 51,0.2); }
+      background-color: rgba(255, 153, 51); }
       #mainNav .navbar-nav > li > a.active:hover {
         font-weight: 500; }
   #mainNav .navbar-nav > li > a,
@@ -92,12 +92,12 @@ section {
       font-weight: 500; }
   @media (min-width: 992px) {
     #mainNav {
-      border-color: transparent;
-      background-color: rgba(255, 255, 255, 0.2); }
+      /* border-color: transparent; */
+      background-color: rgb(86, 145, 112); }
       #mainNav .navbar-brand {
         color: white; }
         #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-          color: white; }
+          color: rgb(62, 161, 87); }
       #mainNav .navbar-nav > li > a,
       #mainNav .navbar-nav > li > a:focus {
         color: rgba(255, 255, 255, 0.7); }
@@ -118,21 +118,69 @@ section {
           #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
             color: #e63900; } }
 
-header.masthead {
-  position: relative;
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 100px;
-  height: 140vh;
-  color: white;
-  background: url("../img/gravel.png"), #7b4397;
-  background: url("../img/gravel.png"), -webkit-linear-gradient(to left, #7b4397, #ffcccc);
-  background: url("../img/gravel.png"), linear-gradient(to left, #4d0000, #dc2430); }
+
+  header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    height: 140vh;
+    color: white;
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;; 
+    padding: 0;
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background: url("../img/gravel.png"), -webkit-linear-gradient(to left, #7b4397, #ffcccc);
+    background: url("../img/gravel.png"), linear-gradient(to left, #4d0000, #dc2430);*/
+   }
+
+  header.masthead .slide:nth-child(1) {
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;
+    animation-delay: 0s;
+  }
+  
+ header.masthead .slide:nth-child(2) {
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;
+    animation-delay: -3s;
+  }
+  
+ header.masthead .slide:nth-child(3) {
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;
+    animation-delay: -6s;
+  }
+  
+ header.masthead .slide:nth-child(4) {
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;
+    animation-delay: -9s;
+  }
+  
+ header.masthead .slide:nth-child(5) {
+    background: url("../img/mangoes.jpg") center center / cover no-repeat fixed;
+    animation-delay: -12s;
+  }
+
+  @keyframes header.masthead {
+    0%, 13%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    93% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+    }
+
   header.masthead .header-content {
     background-color: rgba(0, 0, 0,0.3);
     border-radius: 30px;
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 100px;
+    padding-left: 10%;
     text-align: center; }
     header.masthead .header-content h1 {
       font-size: 27px; }
